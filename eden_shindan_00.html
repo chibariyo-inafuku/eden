@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>にじミラ診断｜ミラシル by 第一生命</title>
-	<meta name="description" content="にじミラ診断でエデン組と暮らしをアップデート！暮らしにまつわる質問に答えて、 あなたと似ているライバーを見つけよう！毎日を彩るヒントをエデン組が教えてくれるかも！？">
+  <meta name="description" content="にじミラ診断でエデン組と暮らしをアップデート！暮らしにまつわる質問に答えて、 あなたと似ているライバーを見つけよう！毎日を彩るヒントをエデン組が教えてくれるかも！？">
 
   <!-- 共通CSS -->
   <link rel="stylesheet" href="common/css/style.css">
 
 </head>
+
 <body>
-  
+  <main>
+    <section class="question">
+      <div class="question__logo">
+        <a href="#" class="question__logo-link">
+          <picture>
+            <source media="(max-width:767px)" srcset="./common/image/question_logo_sp.png">
+            <img src="./common/image/question_logo.png" alt="LOGO" width="426" height="161" loading="lazy" class="img">
+          </picture>
+        </a>
+      </div>
+      <div class="question__wrapper">
+        <div class="question__num">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./common/image/question_num_01_sp.svg">
+            <img src="./common/image/question_num_01.svg" alt="Q1" width="275" height="72" loading="lazy" class="img">
+          </picture>
+        </div>
+        <h2 class="question__title">あなたの行動パターンは？</h2>
+        <div class="question__btns">
+          <a href="#" class="question__btn question__btn-purple">その場のノリと気分で動くタイプ</a>
+          <a href="#" class="question__btn question__btn-blue">決まったルーティンで動くタイプ</a>
+        </div>
+        <div class="question__dots">
+          <ul>
+            <li class="question__dot active"></li>
+            <li class="question__dot"></li>
+            <li class="question__dot"></li>
+            <li class="question__dot"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="btn">
+        <a href="#" class="btn__primary">ひとつ戻る</a>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>

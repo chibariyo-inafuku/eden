@@ -1,16 +1,153 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>にじミラ診断｜ミラシル by 第一生命</title>
-	<meta name="description" content="にじミラ診断でエデン組と暮らしをアップデート！暮らしにまつわる質問に答えて、 あなたと似ているライバーを見つけよう！毎日を彩るヒントをエデン組が教えてくれるかも！？">
+  <meta name="description" content="にじミラ診断でエデン組と暮らしをアップデート！暮らしにまつわる質問に答えて、 あなたと似ているライバーを見つけよう！毎日を彩るヒントをエデン組が教えてくれるかも！？">
 
   <!-- 共通CSS -->
-  <link rel="stylesheet" href="common/css/style.css">
-
+  <link rel="stylesheet" href="./common/css/style.css">
 </head>
+
 <body>
-  
+  <main>
+    <section class="mv">
+      <h1 class="logo">
+        <img src="./common/image/header_logo.svg" alt="LOGO" width="328" height="54" loading="lazy" class="img">
+      </h1>
+
+      <div class="mv__box">
+        <picture class="mv__image pop pop-1">
+          <source media="(max-width: 767px)" srcset="./common/image/mv__chart_sp.png">
+          <img src="./common/image/mv__chart.png" alt="MAIN-VISUAL" width="1440" height="750" loading="eager" class="img">
+        </picture>
+        <div class="mv__middle">
+          <picture class="mv__middle-top pop pop-2">
+            <img src="./common/image/mv_chat_02.png" alt="" width="720" height="310" class="img" loading="eager">
+          </picture>
+          <picture class="mv__middle-center pop pop-3">
+            <source media="(max-width:767px )" srcset="./common/image/mv_chart_03_sp.svg">
+            <img src="./common/image/mv_chart_03.svg" alt="" loading="eager">
+          </picture>
+          <a href="#" class="mv__btn pop pop-3">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./common/image/mv_btn_sp.png">
+              <img src="./common/image/mv_btn.png" alt="MV-BUTTON" width="560" height="165" loading="lazy" class="img">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="gift">
+      <div class="gift__wrapper">
+        <div class="heading">
+          <h2 class="heading__text">
+            プレゼントキャンペーン
+          </h2>
+        </div>
+        <p class="gift__desc">
+          <picture>
+            <source media="(max-width:767px )" srcset="./common/image/gift_desc-sp.png">
+            <img src="./common/image/gift_desc.png" alt="診断結果をシェアすると抽選で200名様に当たる！">
+          </picture>
+        </p>
+        <div class="gift__block">
+          <div class="gift__box">
+            <p class="gift__left">応募期間</p>
+            <p class="gift__right">2025年X月X日～2025年X月X日～</p>
+          </div>
+          <div class="gift__row">
+            <div class="gift__img">
+              <img src="./common/image/gift_img.png" alt="オリジナルイラストカード" width="330" height="426" loading="lazy" class="img">
+            </div>
+            <div class="gift__banner">
+              <img src="./common/image/gift_banner.png" alt="オリジナルイラストカード" width="479" height="119" loading="lazy" class="img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="steps">
+      <div class="steps__wrapper">
+        <div class="heading">
+          <h2 class="heading__text">
+            参加方法
+          </h2>
+        </div>
+        <div class="steps__row">
+          <div class="steps__card steps__card-one">
+            <h3 class="steps__card-title"><img src="./common/image/step_01.svg" alt="STEP1"></h3>
+            <div class="steps__card-wrapper">
+              <div class="steps__card-box">
+                <p class="steps__card-desc">にじミラ診断をする</p>
+                <img src="./common/image/steps_phone.svg" alt="にじミラ診断をする" width="79" height="85" loading="lazy" class="img">
+              </div>
+            </div>
+          </div>
+          <div class="steps__card steps__card-two">
+            <h3 class="steps__card-title"><img src="./common/image/step_02.svg" alt="STEP1"></h3>
+            <div class="steps__card-wrapper">
+              <div class="steps__card-box">
+                <p class="steps__card-desc">診断結果をXでシェア！</p>
+                <img src="./common/image/steps_x.svg" alt="診断結果をXでシェア！" width="56" height="56" loading="lazy" class="img">
+              </div>
+              <p class="steps__note">※ 診断結果ページ内のシェアボタンからの投稿が対象となります。</p>
+            </div>
+          </div>
+          <div class="steps__card steps__card-three">
+            <h3 class="steps__card-title"><img src="./common/image/step_03.svg" alt="STEP1"></h3>
+            <div class="steps__card-wrapper">
+              <div class="steps__card-box">
+                <p class="steps__card-desc">
+                  <picture>
+                    <source media="(max-width:767px)" srcset="./common/image/step_03-ttl-sp.svg">
+                    <img src="./common/image/step_03-ttl.svg" alt="抽選で200名様にオリジナルグッズプレゼント！" width="272" height="67" loading="lazy" class="img">
+                  </picture>
+                </p>
+                <img src="./common/image/gift_img.png" alt="抽選で200名様にオリジナルグッズプレゼント！" width="106" height="137" loading="lazy" class="img">
+              </div>
+              <p class="steps__note">
+                ※診断結果ページ内のシェアボタンからの投稿が対象となります。<br>
+                ※当選者には○○日以降にDMにてご連絡差し上げます
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="application">
+      <div class="application__wrapper">
+        <div class="heading">
+          <h2 class="heading__text">
+            応募要項
+          </h2>
+        </div>
+        <div class="application__block">
+          <ul class="application__list">
+            <li class="application__item">第一生命の契約有無に関わらず、応募いただけます。</li>
+            <li class="application__item">応募できる方は、成人に限ります。未成年の方が万が一応募されても当せん通知は届きません。</li>
+            <li class="application__item">第一生命の社員ならびにその家族は応募できません</li>
+            <li class="application__item">事情により、予告なく本キャンペーンの内容を変更または実施を中止する場合があります。</li>
+            <li class="application__item">同一人物による複数アカウントでの連続応募など、キャンペーン運営上不公正と当社が判断した場合、事前告知なく当せんを無効とさせていただく場合がございます。</li>
+            <li class="application__item">今後も同様のキャンペーンを実施する場合があります</li>
+            <li class="application__item">お届け時に退会されていた場合は、賞品のお届けができません。</li>
+            <li class="application__item">当選された賞品の転売・譲渡は固く禁止いたします。</li>
+            <li class="application__item">住所不明、転居先不明、長期不在などにより賞品をお届けできない場合には、当せんを無効とさせていただきます。</li>
+            <li class="application__item">本キャンペーンに関して応募者が被った損害または損失などについては、当社の故意または重過失に起因する場合を除き、当社は一切の責任を負わないものとします。  </li>
+            <li class="application__item">第一生命ではいただいた内容を以下の業務などに活用します。</li>
+            <li class="application__item">第一生命の業務に関する情報提供・運営管理</li>
+            <li class="application__item">詳細は、<a href="https://www.dai-ichi-life.co.jp/" target="_blank">第一生命ホームページ</a>でご覧いただけます。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="btn">
+      <a href="#" class="btn__primary">キャンペーントップへ</a>
+    </div>
+  </main>
+  <script src="./common/js/script.js"></script>
 </body>
+
 </html>
