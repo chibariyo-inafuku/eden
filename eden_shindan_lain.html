@@ -12,9 +12,11 @@
 
 </head>
 
+
+
 <body>
 
-  <section class="question">
+  <section class="question" data-page="eden_shindan_00.html" data-next-a="eden_shindan_01_01.html" data-next-b="eden_shindan_01_02.html">
 
     <div class="question__logo">
       <a href="#" class="question__logo-link">
@@ -26,34 +28,20 @@
     </div>
 
     <div class="question__wrapper">
-      <div class="question__num">
-        <picture>
-          <source media="(max-width: 767px)" srcset="./common/image/question_num_01_sp.svg">
-          <img src="./common/image/question_num_01.svg" alt="Q1" width="275" height="72" loading="lazy" class="img">
-        </picture>
-      </div>
-      <h2 class="question__title">あなたの行動パターンは？​</h2>
-      <div class="question__btns">
-        <a href="#" id="choiceA" class="question__btn question__btn-purple">その場のノリと気分で動くタイプ</a>
-        <a href="#" id="choiceB" class="question__btn question__btn-blue">決まったルーティンで動くタイプ</a>
-      </div>
-      <div class="question__dots">
-        <ul>
-          <li class="question__dot active"></li>
-          <li class="question__dot"></li>
-          <li class="question__dot"></li>
-          <li class="question__dot"></li>
-        </ul>
-      </div>
+      <h1>あなたのタイプは「Lain」</h1>
+      <p>落ち着きと堅実さで確実に前進するタイプ。</p>
+      <!-- <div class="actions center" style="justify-content:center;margin-top:16px">
+        <button class="btn" id="backBtn">1ページ前へ戻る</button>
+        <a class="btn__primary" id="restart">最初からやり直す</a>
+      </div> -->
     </div>
 
-    <div class="btn">
+    <!-- <div class="btn">
       <a href="#" id="backBtn" class="btn__primary">ひとつ戻る</a>
-    </div>
+    </div> -->
   </section>
 
   <script>
-    const THIS = "eden_shindan_00.html";
 
     const START = "eden_shindan_00.html";
     const KEY = "edenTrail";
@@ -92,13 +80,15 @@
       location.href = u.toString();
     }
 
-    const a = document.getElementById("choiceA");
-    const b = document.getElementById("choiceB");
-    a.href = buildNext("eden_shindan_01_01.html", THIS);
-    b.href = buildNext("eden_shindan_01_02.html", THIS);
-    a.addEventListener("click", () => pushTrail(THIS));
-    b.addEventListener("click", () => pushTrail(THIS));
     document.getElementById("backBtn").addEventListener("click", goBack);
+    document.getElementById("restart").addEventListener("click", (e) => {
+      e.preventDefault();
+      setTrail([]);
+      const u = new URL(START, location.href);
+      const cur = new URLSearchParams(location.search);
+      for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
+      location.href = u.toString();
+    });
   </script>
 
 </body>

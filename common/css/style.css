@@ -125,6 +125,7 @@ h6 {
   position: relative;
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .mv__box .mv__image {
   position: absolute;
@@ -293,7 +294,7 @@ h6 {
 }
 @media only screen and (max-width: 767px) {
   .gift__banner {
-    padding: 0 25px;
+    /* padding: 0 25px; */
   }
 }
 .gift__banner-bottom {
@@ -619,6 +620,7 @@ h6 {
   width: 100%;
   height: 100%;
   padding-bottom: 65px;
+  height: 100dvh;
 }
 @media only screen and (max-width: 767px) {
   .question {
@@ -678,7 +680,7 @@ h6 {
 }
 @media only screen and (max-width: 767px) {
   .question__num {
-    top: -52px;
+    top: -39px;
   }
   .question__num img {
     max-width: 164px;

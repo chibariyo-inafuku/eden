@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EDEN 診断｜Q2-1</title>
+  <meta name="description" content="にじミラ診断でエデン組と暮らしをアップデート！暮らしにまつわる質問に答えて、 あなたと似ているライバーを見つけよう！毎日を彩るヒントをエデン組が教えてくれるかも！？">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="common/css/style.css">
+
+</head>
+
+ 
+
+<body>
+
+  <section class="question" data-page="eden_shindan_02_02.html" data-next-a="eden_shindan_03_02.html" data-next-b="eden_shindan_03_03.html">
+
+    <div class="question__logo">
+      <a href="#" class="question__logo-link">
+        <picture>
+          <source media="(max-width:767px)" srcset="./common/image/question_logo_sp.png">
+          <img src="./common/image/question_logo.png" alt="LOGO" width="426" height="161" loading="lazy" class="img">
+        </picture>
+      </a>
+    </div>
+
+    <div class="question__wrapper">
+      <div class="question__num">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./common/image/question_num_03_sp.svg">
+          <img src="./common/image/question_num_03.svg" alt="Q1" width="275" height="72" loading="lazy" class="img">
+        </picture>
+      </div>
+      <h2 class="question__title">旅行の楽しみ方は？​</h2>
+      <div class="question__btns">
+        <a href="#" id="choiceA" class="question__btn question__btn-purple">ご当地グルメを食べつくす</a>
+        <a href="#" id="choiceB" class="question__btn question__btn-blue">ゆったり観光&歴史散策</a>
+      </div>
+      <div class="question__dots">
+        <ul>
+          <li class="question__dot"></li>
+          <li class="question__dot"></li>
+          <li class="question__dot active"></li>
+          <li class="question__dot"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn">
+      <a href="#" id="backBtn" class="btn__primary">ひとつ戻る</a>
+    </div>
+  </section>
+
+  <script>
+    const THIS="eden_shindan_02_02.html";
+    
+  const START = "eden_shindan_00.html";
+  const KEY = "edenTrail";
+
+  function getTrail(){ try { return JSON.parse(sessionStorage.getItem(KEY) || "[]"); } catch(e){ return []; } }
+  function setTrail(a){ sessionStorage.setItem(KEY, JSON.stringify(a)); }
+  function pushTrail(p){ const t=getTrail(); if (t.length===0 || t[t.length-1]!==p){ t.push(p); setTrail(t); } }
+  function popTrail(){ const t=getTrail(); const p=t.pop(); setTrail(t); return p; }
+
+  function buildNext(url, thisPage){
+    const u = new URL(url, location.href);
+    const cur = new URLSearchParams(location.search);
+    for (const [k,v] of cur.entries()) { u.searchParams.set(k, v); }
+    u.searchParams.set("from", thisPage);
+    return u.toString();
+  }
+
+  (function initTrail(){
+    const from = new URLSearchParams(location.search).get("from");
+    if (from){ pushTrail(from); }
+    if (location.pathname.endsWith(START)){ setTrail([]); }
+  })();
+
+  function goBack(){
+    const prev = popTrail();
+    if (prev){
+      const u = new URL(prev, location.href);
+      const cur = new URLSearchParams(location.search);
+      for (const [k,v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
+      location.href = u.toString();
+      return;
+    }
+    const u = new URL(START, location.href);
+    const cur = new URLSearchParams(location.search);
+    for (const [k,v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
+    location.href = u.toString();
+  }
+
+    const a = document.getElementById("choiceA");
+    const b = document.getElementById("choiceB");
+    a.href = buildNext("eden_shindan_03_02.html", THIS);
+    b.href = buildNext("eden_shindan_03_03.html", THIS);
+    a.addEventListener("click", () => pushTrail(THIS));
+    b.addEventListener("click", () => pushTrail(THIS));
+    document.getElementById("backBtn").addEventListener("click", goBack);
+  </script>
+
+</body>
+
+</html>

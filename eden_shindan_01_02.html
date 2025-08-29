@@ -12,9 +12,11 @@
 
 </head>
 
+
+
 <body>
 
-  <section class="question">
+  <section class="question" data-page="eden_shindan_01_02.html" data-next-a="eden_shindan_02_02.html" data-next-b="eden_shindan_02_03.html">
 
     <div class="question__logo">
       <a href="#" class="question__logo-link">
@@ -28,19 +30,19 @@
     <div class="question__wrapper">
       <div class="question__num">
         <picture>
-          <source media="(max-width: 767px)" srcset="./common/image/question_num_01_sp.svg">
-          <img src="./common/image/question_num_01.svg" alt="Q1" width="275" height="72" loading="lazy" class="img">
+          <source media="(max-width: 767px)" srcset="./common/image/question_num_02_sp.svg">
+          <img src="./common/image/question_num_02.svg" alt="Q1" width="275" height="72" loading="lazy" class="img">
         </picture>
       </div>
-      <h2 class="question__title">あなたの行動パターンは？​</h2>
+      <h2 class="question__title">理想のお風呂時間は？​</h2>
       <div class="question__btns">
-        <a href="#" id="choiceA" class="question__btn question__btn-purple">その場のノリと気分で動くタイプ</a>
-        <a href="#" id="choiceB" class="question__btn question__btn-blue">決まったルーティンで動くタイプ</a>
+        <a href="#" id="choiceA" class="question__btn question__btn-purple">おうちでまったり癒しの時間</a>
+        <a href="#" id="choiceB" class="question__btn question__btn-blue">開放的な温泉でリフレッシュ</a>
       </div>
       <div class="question__dots">
         <ul>
-          <li class="question__dot active"></li>
           <li class="question__dot"></li>
+          <li class="question__dot active"></li>
           <li class="question__dot"></li>
           <li class="question__dot"></li>
         </ul>
@@ -53,7 +55,7 @@
   </section>
 
   <script>
-    const THIS = "eden_shindan_00.html";
+    const THIS = "eden_shindan_01_02.html";
 
     const START = "eden_shindan_00.html";
     const KEY = "edenTrail";
@@ -94,8 +96,8 @@
 
     const a = document.getElementById("choiceA");
     const b = document.getElementById("choiceB");
-    a.href = buildNext("eden_shindan_01_01.html", THIS);
-    b.href = buildNext("eden_shindan_01_02.html", THIS);
+    a.href = buildNext("eden_shindan_02_02.html", THIS);
+    b.href = buildNext("eden_shindan_02_03.html", THIS);
     a.addEventListener("click", () => pushTrail(THIS));
     b.addEventListener("click", () => pushTrail(THIS));
     document.getElementById("backBtn").addEventListener("click", goBack);
