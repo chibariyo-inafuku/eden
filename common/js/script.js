@@ -2,32 +2,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const mv = document.querySelector(".mv");
   const pops = document.querySelectorAll(".pop");
 
-  // Extract background image URL from .mv
   const bgImage = window.getComputedStyle(mv).backgroundImage;
   const bgUrlMatch = bgImage.match(/url\(["']?(.+?)["']?\)/);
 
-  if (bgUrlMatch) {
+  if(bgUrlMatch) {
     const bgUrl = bgUrlMatch[1];
-
-    // Preload the background image
     const bgImg = new Image();
     bgImg.src = bgUrl;
 
     bgImg.onload = () => {
-      // Once bg image is loaded, start processing .pop images
+      // Adjust delay for mobile vs desktop
+      const isMobile = window.innerWidth < 768; // adjust breakpoint if needed
+      const delayStep = isMobile ? 400 : 500;
+
       pops.forEach((el, index) => {
         const img = el.querySelector("img");
-
-        if (!img) return; // Skip if no <img> inside
+        if(!img) return;
 
         const reveal = () => {
           setTimeout(() => {
             el.classList.add("show");
-          }, index * 500);
+          }, index * delayStep);
         };
 
-        if (img.complete) {
-          reveal(); // Already loaded (from cache)
+        if(img.complete) {
+          reveal();
         } else {
           img.addEventListener("load", reveal);
         }

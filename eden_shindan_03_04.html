@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EDEN 診断｜Q2-1</title>
+  <title>EDEN 診断｜Q3-4</title>
   <meta name="description" content="にじミラ診断でエデン組と暮らしをアップデート！暮らしにまつわる質問に答えて、 あなたと似ているライバーを見つけよう！毎日を彩るヒントをエデン組が教えてくれるかも！？">
 
   <!-- 共通CSS -->
@@ -16,7 +16,7 @@
 
 <body>
 
-  <section class="question" data-page="eden_shindan_03_04.html" data-next-a="eden_shindan_oliver.html" data-next-b="eden_shindan_lain.html">
+  <section class="question">
 
     <div class="question__logo">
       <a href="#" class="question__logo-link">
@@ -96,8 +96,8 @@
 
     const a = document.getElementById("choiceA");
     const b = document.getElementById("choiceB");
-    a.href = buildNext("eden_shindan_oliver.html", THIS);
-    b.href = buildNext("eden_shindan_lain.html", THIS);
+    a.href = buildNext("eden_shindan_lain.html", THIS);
+    b.href = buildNext("eden_shindan_oliver.html", THIS);
     a.addEventListener("click", () => pushTrail(THIS));
     b.addEventListener("click", () => pushTrail(THIS));
     document.getElementById("backBtn").addEventListener("click", goBack);
