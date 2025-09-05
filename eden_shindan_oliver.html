@@ -12,7 +12,7 @@
 
 </head>
 
- 
+
 
 <body>
 
@@ -27,53 +27,58 @@
       </a>
     </div>
 
-        <div class="question__wrapper">
-      <h1>あなたのタイプは「Oliver」</h1>
-      <p>ひらめきと遊び心で世界を広げるタイプ。</p>
-      <!-- <div class="actions center" style="justify-content:center;margin-top:16px">
+    <div class="question__box">
+      <div class="question__wrapper">
+        <h1>あなたのタイプは「Oliver」</h1>
+        <p>ひらめきと遊び心で世界を広げるタイプ。</p>
+        <!-- <div class="actions center" style="justify-content:center;margin-top:16px">
         <button class="btn" id="backBtn">1ページ前へ戻る</button>
         <a class="btn__primary" id="restart">最初からやり直す</a>
       </div> -->
+      </div>
+    </div>
+    <p class="copyright">&copy; ANYCOLOR, Inc.</p>
+
   </section>
 
   <script>
-    
-  const START = "eden_shindan_00.html";
-  const KEY = "edenTrail";
 
-  function getTrail(){ try { return JSON.parse(sessionStorage.getItem(KEY) || "[]"); } catch(e){ return []; } }
-  function setTrail(a){ sessionStorage.setItem(KEY, JSON.stringify(a)); }
-  function pushTrail(p){ const t=getTrail(); if (t.length===0 || t[t.length-1]!==p){ t.push(p); setTrail(t); } }
-  function popTrail(){ const t=getTrail(); const p=t.pop(); setTrail(t); return p; }
+    const START = "eden_shindan_00.html";
+    const KEY = "edenTrail";
 
-  function buildNext(url, thisPage){
-    const u = new URL(url, location.href);
-    const cur = new URLSearchParams(location.search);
-    for (const [k,v] of cur.entries()) { u.searchParams.set(k, v); }
-    u.searchParams.set("from", thisPage);
-    return u.toString();
-  }
+    function getTrail() { try { return JSON.parse(sessionStorage.getItem(KEY) || "[]"); } catch(e) { return []; } }
+    function setTrail(a) { sessionStorage.setItem(KEY, JSON.stringify(a)); }
+    function pushTrail(p) { const t = getTrail(); if(t.length === 0 || t[t.length - 1] !== p) { t.push(p); setTrail(t); } }
+    function popTrail() { const t = getTrail(); const p = t.pop(); setTrail(t); return p; }
 
-  (function initTrail(){
-    const from = new URLSearchParams(location.search).get("from");
-    if (from){ pushTrail(from); }
-    if (location.pathname.endsWith(START)){ setTrail([]); }
-  })();
-
-  function goBack(){
-    const prev = popTrail();
-    if (prev){
-      const u = new URL(prev, location.href);
+    function buildNext(url, thisPage) {
+      const u = new URL(url, location.href);
       const cur = new URLSearchParams(location.search);
-      for (const [k,v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
-      location.href = u.toString();
-      return;
+      for(const [k, v] of cur.entries()) { u.searchParams.set(k, v); }
+      u.searchParams.set("from", thisPage);
+      return u.toString();
     }
-    const u = new URL(START, location.href);
-    const cur = new URLSearchParams(location.search);
-    for (const [k,v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
-    location.href = u.toString();
-  }
+
+    (function initTrail() {
+      const from = new URLSearchParams(location.search).get("from");
+      if(from) { pushTrail(from); }
+      if(location.pathname.endsWith(START)) { setTrail([]); }
+    })();
+
+    function goBack() {
+      const prev = popTrail();
+      if(prev) {
+        const u = new URL(prev, location.href);
+        const cur = new URLSearchParams(location.search);
+        for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
+        location.href = u.toString();
+        return;
+      }
+      const u = new URL(START, location.href);
+      const cur = new URLSearchParams(location.search);
+      for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
+      location.href = u.toString();
+    }
 
     document.getElementById("backBtn").addEventListener("click", goBack);
     document.getElementById("restart").addEventListener("click", (e) => {
@@ -81,7 +86,7 @@
       setTrail([]);
       const u = new URL(START, location.href);
       const cur = new URLSearchParams(location.search);
-      for (const [k,v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
+      for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
       location.href = u.toString();
     });
   </script>

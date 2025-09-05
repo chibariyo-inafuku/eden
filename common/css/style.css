@@ -61,8 +61,9 @@ h6 {
   background: url(../../common/image/gift_heading.png);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 357px;
-  height: 87px;
+  width: 100%;
+  max-width: 434px;
+  height: 95px;
   margin: 0 auto 14px;
   display: flex;
   justify-content: center;
@@ -71,6 +72,8 @@ h6 {
 
 @media only screen and (max-width: 767px) {
   .heading {
+    width: 100%;
+    max-width: 350px;
     height: 90px;
     background-size: 100% 100%;
     position: relative;
@@ -83,7 +86,7 @@ h6 {
   color: #00196C;
   text-align: center;
   font-family: "CorporateLogo";
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 700;
   line-height: normal;
 }
@@ -278,6 +281,7 @@ h6 {
 .gift__desc {
   margin-bottom: 21px;
   text-align: center;
+  margin-top: 40px;
 }
 
 .gift__box {
@@ -292,6 +296,10 @@ h6 {
     flex-wrap: wrap;
     gap: 9px;
   }
+
+  .gift__desc {
+    margin-top: 0;
+  }
 }
 
 .gift__left {
@@ -305,7 +313,7 @@ h6 {
   flex-shrink: 0;
   color: #FFF;
   font-family: "Noto Sans JP";
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   line-height: normal;
 }
@@ -314,9 +322,17 @@ h6 {
   color: #000;
   text-align: center;
   font-family: "Noto Sans JP";
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   line-height: normal;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .gift__right,
+  .gift__left {
+    font-size: 20px;
+  }
 }
 
 .gift__row {
@@ -384,12 +400,13 @@ h6 {
 .steps__row {
   display: flex;
   gap: 49px;
-  margin-top: 24px;
+  margin-top: 30px;
 }
 
 @media only screen and (max-width: 767px) {
   .steps__row {
     flex-direction: column;
+    margin-top: 0;
   }
 }
 
@@ -609,9 +626,19 @@ h6 {
 .steps__note {
   color: #000;
   font-family: "Noto Sans JP";
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 160%;
+}
+
+@media only screen and (max-width: 767px) {
+  .steps__note {
+    color: #000;
+    font-family: "Noto Sans JP";
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 160%;
+  }
 }
 
 .application {
@@ -626,6 +653,16 @@ h6 {
 
 .application .heading {
   margin-bottom: 14px;
+}
+
+.application__block {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .application__block {
+    margin-top: 0;
+  }
 }
 
 .application__wrapper {
@@ -660,13 +697,13 @@ h6 {
   align-items: center;
   justify-content: center;
   margin-top: 35px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 767px) {
   .btn {
     margin-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 }
 
@@ -717,14 +754,15 @@ h6 {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
-  padding-bottom: 65px;
-  height: 100dvh;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 @media only screen and (max-width: 767px) {
   .question {
-    padding-bottom: 20px;
     background-image: url(../../common/image/question_bg_sp.png), linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%), linear-gradient(195deg, #C8DDFF 25.75%, #DAFF96 56.39%, #FFA5A5 88.07%, #FFA1C0 103.99%);
   }
 }
@@ -763,6 +801,7 @@ h6 {
 
 .question__wrapper {
   padding: 84px 0 35px;
+  width: 100%;
   max-width: 997px;
   margin: 0 auto 46px;
   border-radius: 20px;
@@ -774,7 +813,7 @@ h6 {
 
 @media only screen and (max-width: 767px) {
   .question__wrapper {
-    margin-inline: 15px;
+    /* margin-inline: 15px; */
     margin-bottom: 25px;
     box-shadow: 4px 4px 0 0 rgba(47, 53, 139, 0.25);
     padding: 47px 0 26px;
@@ -783,14 +822,14 @@ h6 {
 
 .question__num {
   position: absolute;
-  top: -25px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 767px) {
   .question__num {
-    top: -39px;
+    top: -52px;
   }
 
   .question__num img {
@@ -842,7 +881,7 @@ h6 {
   border-radius: 37px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   text-decoration: unset;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   transition: all 0.3s ease;
 }
 
@@ -859,7 +898,7 @@ h6 {
 .question__btn-purple:hover {
   background: #fff;
   color: #FE67AC;
-  border-color: #FE67AC;
+  border: 1px solid #FE67AC;
 }
 
 .question__btn-blue {
@@ -952,5 +991,35 @@ h6 {
   opacity: 1;
   transform: scale(1);
 }
+
+.copyright {
+  color: #000;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 8px 0;
+  /* 16px */
+}
+
+@media only screen and (max-width: 767px) {
+  .copyright {
+    margin-bottom: 13px;
+  }
+
+  .question__box {
+    padding-inline: 15px;
+  }
+}
+
+.question .copyright {
+  width: 100%;
+  padding: 13.5px 0;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
 
 /*# sourceMappingURL=style.css.map */

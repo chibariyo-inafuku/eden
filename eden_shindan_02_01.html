@@ -12,7 +12,7 @@
 
 </head>
 
- 
+
 
 <body>
 
@@ -27,72 +27,76 @@
       </a>
     </div>
 
-    <div class="question__wrapper">
-      <div class="question__num">
-        <picture>
-          <source media="(max-width: 767px)" srcset="./common/image/question_num_03_sp.svg">
-          <img src="./common/image/question_num_03.svg" alt="Q1" width="275" height="72" loading="lazy" class="img">
-        </picture>
-      </div>
-      <h2 class="question__title">お休みの日は？</h2>
-      <div class="question__btns">
-        <a href="#" id="choiceA" class="question__btn question__btn-purple">ラーメン替え玉ご飯ドカ食い</a>
-        <a href="#" id="choiceB" class="question__btn question__btn-blue">ミュージカルを観に劇場へ</a>
-      </div>
-      <div class="question__dots">
-        <ul>
-          <li class="question__dot"></li>
-          <li class="question__dot"></li>
-          <li class="question__dot active"></li>
-          <li class="question__dot"></li>
-        </ul>
+    <div class="question__box">
+      <div class="question__wrapper">
+        <div class="question__num">
+          <picture>
+            <source media="(max-width: 767px)" srcset="./common/image/question_num_03_sp.svg">
+            <img src="./common/image/question_num_03.svg" alt="Q1" width="275" height="72" loading="lazy" class="img">
+          </picture>
+        </div>
+        <h2 class="question__title">お休みの日は？</h2>
+        <div class="question__btns">
+          <a href="#" id="choiceA" class="question__btn question__btn-purple">ラーメン替え玉ご飯ドカ食い</a>
+          <a href="#" id="choiceB" class="question__btn question__btn-blue">ミュージカルを観に劇場へ</a>
+        </div>
+        <div class="question__dots">
+          <ul>
+            <li class="question__dot"></li>
+            <li class="question__dot"></li>
+            <li class="question__dot active"></li>
+            <li class="question__dot"></li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="btn">
       <a href="#" id="backBtn" class="btn__primary">ひとつ戻る</a>
     </div>
+    <p class="copyright">&copy; ANYCOLOR, Inc.</p>
+
   </section>
 
-    <script>
-    const THIS="eden_shindan_02_01.html";
-    
-  const START = "eden_shindan_00.html";
-  const KEY = "edenTrail";
+  <script>
+    const THIS = "eden_shindan_02_01.html";
 
-  function getTrail(){ try { return JSON.parse(sessionStorage.getItem(KEY) || "[]"); } catch(e){ return []; } }
-  function setTrail(a){ sessionStorage.setItem(KEY, JSON.stringify(a)); }
-  function pushTrail(p){ const t=getTrail(); if (t.length===0 || t[t.length-1]!==p){ t.push(p); setTrail(t); } }
-  function popTrail(){ const t=getTrail(); const p=t.pop(); setTrail(t); return p; }
+    const START = "eden_shindan_00.html";
+    const KEY = "edenTrail";
 
-  function buildNext(url, thisPage){
-    const u = new URL(url, location.href);
-    const cur = new URLSearchParams(location.search);
-    for (const [k,v] of cur.entries()) { u.searchParams.set(k, v); }
-    u.searchParams.set("from", thisPage);
-    return u.toString();
-  }
+    function getTrail() { try { return JSON.parse(sessionStorage.getItem(KEY) || "[]"); } catch(e) { return []; } }
+    function setTrail(a) { sessionStorage.setItem(KEY, JSON.stringify(a)); }
+    function pushTrail(p) { const t = getTrail(); if(t.length === 0 || t[t.length - 1] !== p) { t.push(p); setTrail(t); } }
+    function popTrail() { const t = getTrail(); const p = t.pop(); setTrail(t); return p; }
 
-  (function initTrail(){
-    const from = new URLSearchParams(location.search).get("from");
-    if (from){ pushTrail(from); }
-    if (location.pathname.endsWith(START)){ setTrail([]); }
-  })();
-
-  function goBack(){
-    const prev = popTrail();
-    if (prev){
-      const u = new URL(prev, location.href);
+    function buildNext(url, thisPage) {
+      const u = new URL(url, location.href);
       const cur = new URLSearchParams(location.search);
-      for (const [k,v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
-      location.href = u.toString();
-      return;
+      for(const [k, v] of cur.entries()) { u.searchParams.set(k, v); }
+      u.searchParams.set("from", thisPage);
+      return u.toString();
     }
-    const u = new URL(START, location.href);
-    const cur = new URLSearchParams(location.search);
-    for (const [k,v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
-    location.href = u.toString();
-  }
+
+    (function initTrail() {
+      const from = new URLSearchParams(location.search).get("from");
+      if(from) { pushTrail(from); }
+      if(location.pathname.endsWith(START)) { setTrail([]); }
+    })();
+
+    function goBack() {
+      const prev = popTrail();
+      if(prev) {
+        const u = new URL(prev, location.href);
+        const cur = new URLSearchParams(location.search);
+        for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
+        location.href = u.toString();
+        return;
+      }
+      const u = new URL(START, location.href);
+      const cur = new URLSearchParams(location.search);
+      for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
+      location.href = u.toString();
+    }
 
     const a = document.getElementById("choiceA");
     const b = document.getElementById("choiceB");
