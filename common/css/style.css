@@ -446,6 +446,12 @@ h6 {
   line-height: normal;
 }
 
+@media only screen and (max-width: 340px) {
+  .steps__card-desc {
+    font-size: 20px;
+  }
+}
+
 .steps__card:not(.steps__card-three) .steps__card-box {
   display: flex;
   flex-direction: column;
@@ -611,6 +617,12 @@ h6 {
 
 .steps__card-three .steps__note {
   margin-top: 4px;
+}
+
+@media only screen and (max-width: 400px) {
+  .steps__card-three .steps__card-box .img-card {
+    width: 30%;
+  }
 }
 
 .steps__card-wrapper {
