@@ -3,11 +3,14 @@
 
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MCLC97');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MCLC97');</script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,147 +24,198 @@
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCLC97"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCLC97" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <main>
-    <section class="mv">
-      <h1 class="logo">
-        <img src="./common/image/header_logo.png" alt="LOGO" width="328" height="54" loading="lazy" class="img">
-      </h1>
+    <div class="wrapper">
+      <section class="mv">
+        <h1 class="logo">
+          <img src="./common/image/header_logo.png" alt="LOGO" width="328" height="54" loading="lazy" class="img">
+        </h1>
 
-      <div class="mv__box">
-        <picture class="mv__image pop pop-1">
-          <source media="(max-width: 767px)" srcset="./common/image/mv__chart_sp.png">
-          <img src="./common/image/mv__chart.png" alt="MAIN-VISUAL" width="1440" height="750" loading="eager" class="img">
-        </picture>
-        <div class="mv__middle">
-          <picture class="mv__middle-top pop pop-2">
-            <img src="./common/image/mv_chat_02.png" alt="" width="720" height="310" class="img" loading="eager">
+        <div class="mv__box">
+          <picture class="mv__image pop pop-1">
+            <img src="./common/image/mv__chart_sp.png" alt="MAIN-VISUAL" width="1440" height="750" loading="eager"
+              class="img">
           </picture>
-          <picture class="mv__middle-center pop pop-3">
-            <source media="(max-width:767px )" srcset="./common/image/mv_chart_03_sp.png">
-            <img src="./common/image/mv_chart_03.png" alt="" loading="eager">
-          </picture>
-          <a href="./eden_shindan_00.html" class="mv__btn pop pop-4">
-            <picture>
-              <source media="(max-width: 767px)" srcset="./common/image/mv_btn_sp.png">
-              <img src="./common/image/mv_btn.png" alt="MV-BUTTON" width="560" height="165" loading="eager" class="img">
+          <div class="mv__middle">
+            <picture class="mv__middle-top pop pop-2">
+              <img src="./common/image/mv_chat_02.png" alt="" width="720" height="310" class="img" loading="eager">
             </picture>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="gift">
-      <div class="gift__wrapper">
-        <div class="heading">
-          <h2 class="heading__text">
-            プレゼントキャンペーン
-          </h2>
-        </div>
-        <p class="gift__desc">
-          <picture>
-            <source media="(max-width:767px )" srcset="./common/image/gift_desc-sp.png">
-            <img src="./common/image/gift_desc.png" alt="診断結果をシェアすると抽選で200名様に当たる！" width="802" height="80" loading="lazy" class="img">
-          </picture>
-        </p>
-        <div class="gift__block">
-          <div class="gift__box">
-            <p class="gift__left">応募期間</p>
-            <p class="gift__right">2025年X月X日～2025年X月X日～</p>
-          </div>
-          <div class="gift__row">
-            <div class="gift__img">
-              <img src="./common/image/gift_img.png" alt="オリジナルイラストカード" width="330" height="426" loading="lazy" class="img">
-            </div>
-            <div class="gift__banner">
+            <picture class="mv__middle-center pop pop-3">
+              <source media="(max-width:767px )" srcset="./common/image/mv_chart_03_sp.png">
+              <img src="./common/image/mv_chart_03_sp.png" alt="" loading="eager">
+            </picture>
+            <a href="./eden_shindan_00.html" class="mv__btn pop pop-4">
               <picture>
-                <source media="(max-width: 767px)" srcset="./common/image/gift_banner-sp.png">
-                <img src="./common/image/gift_banner.png" alt="オリジナルイラストカード" width="479" height="119" loading="lazy" class="img">
+                <source media="(max-width: 767px)" srcset="./common/image/mv_btn_sp.png">
+                <img src="./common/image/mv_btn_sp.png" alt="MV-BUTTON" width="560" height="165" loading="eager"
+                  class="img">
               </picture>
-            </div>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="steps">
-      <div class="steps__wrapper">
-        <div class="heading">
-          <h2 class="heading__text">
-            参加方法
-          </h2>
+      </section>
+
+      <!-- ?GIFT -->
+      <section class="gift">
+        <div class="gift__wrapper">
+          <picture>
+            <img src="./common/image/gift-campaign-details.png" alt="プレゼントキャンペーン詳細" loading="lazy" width="349"
+              height="197" class="gift__campaign-details">
+          </picture>
+
+          <picture>
+            <img src="./common/image/campaign-prizes.png" alt="キャンペーン景品" loading="lazy" width="345" height="477"
+              class="campaign-prizes">
+          </picture>
+          <!-- <div class="heading">
+            <h2 class="heading__text">
+              プレゼントキャンペーン
+            </h2>
+          </div>
+          <p class="gift__desc">
+            <picture>
+              <source media="(max-width:767px )" srcset="./common/image/gift_desc-sp.png">
+              <img src="./common/image/gift_desc.png" alt="診断結果をシェアすると抽選で200名様に当たる！" width="802" height="80"
+                loading="lazy" class="img">
+            </picture>
+          </p>
+          <div class="gift__block">
+            <div class="gift__box">
+              <p class="gift__left">応募期間</p>
+              <p class="gift__right">2025年X月X日～2025年X月X日～</p>
+            </div>
+            <div class="gift__row">
+              <div class="gift__img">
+                <img src="./common/image/gift_img.png" alt="オリジナルイラストカード" width="330" height="426" loading="lazy"
+                  class="img">
+              </div>
+              <div class="gift__banner">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./common/image/gift_banner-sp.png">
+                  <img src="./common/image/gift_banner.png" alt="オリジナルイラストカード" width="479" height="119" loading="lazy"
+                    class="img">
+                </picture>
+              </div>
+            </div>
+          </div> -->
         </div>
-        <div class="steps__row">
-          <div class="steps__card steps__card-one">
-            <h3 class="steps__card-title"><img src="./common/image/step_01.png" alt="STEP1"></h3>
-            <div class="steps__card-wrapper">
-              <div class="steps__card-box">
-                <p class="steps__card-desc">にじミラ診断をする</p>
-                <img src="./common/image/steps_phone.png" alt="にじミラ診断をする" width="79" height="85" loading="lazy" class="img">
+      </section>
+
+      <!-- STEPS -->
+      <section class="steps">
+        <div class="steps__wrapper">
+
+          <div class="steps__one">
+            <picture>
+              <img src="./common/image/step-one.png" alt="参加方法　STEP１　にじミラ診断をする" loading="lazy" width="349" height="28">
+            </picture>
+          </div>
+
+          <div class="steps__one">
+            <picture>
+              <img src="./common/image/step-two.png" alt="参加方法　STEP2　診断結果をXでシェア！" loading="lazy" width="349"
+                height="28">
+            </picture>
+          </div>
+
+          <div class="steps__one">
+            <picture>
+              <img src="./common/image/step-three.png" alt="参加方法　STEP3　オリジナルグッズをプレゼント" loading="lazy" width="349"
+                height="28">
+            </picture>
+          </div>
+
+
+          <!-- <div class="heading">
+            <h2 class="heading__text">
+              参加方法
+            </h2>
+          </div>
+          <div class="steps__row">
+            <div class="steps__card steps__card-one">
+              <h3 class="steps__card-title"><img src="./common/image/step_01.png" alt="STEP1"></h3>
+              <div class="steps__card-wrapper">
+                <div class="steps__card-box">
+                  <p class="steps__card-desc">にじミラ診断をする</p>
+                  <img src="./common/image/steps_phone.png" alt="にじミラ診断をする" width="79" height="85" loading="lazy"
+                    class="img">
+                </div>
               </div>
             </div>
-          </div>
-          <div class="steps__card steps__card-two">
-            <h3 class="steps__card-title"><img src="./common/image/step_02.png" alt="STEP1"></h3>
-            <div class="steps__card-wrapper">
-              <div class="steps__card-box">
-                <p class="steps__card-desc">診断結果をXでシェア！</p>
-                <img src="./common/image/steps_x.png" alt="診断結果をXでシェア！" width="56" height="56" loading="lazy" class="img">
+            <div class="steps__card steps__card-two">
+              <h3 class="steps__card-title"><img src="./common/image/step_02.png" alt="STEP1"></h3>
+              <div class="steps__card-wrapper">
+                <div class="steps__card-box">
+                  <p class="steps__card-desc">診断結果をXでシェア！</p>
+                  <img src="./common/image/steps_x.png" alt="診断結果をXでシェア！" width="56" height="56" loading="lazy"
+                    class="img">
+                </div>
+                <p class="steps__note">※ 診断結果ページ内のシェアボタンからの投稿が対象となります。</p>
               </div>
-              <p class="steps__note">※ 診断結果ページ内のシェアボタンからの投稿が対象となります。</p>
             </div>
-          </div>
-          <div class="steps__card steps__card-three">
-            <h3 class="steps__card-title"><img src="./common/image/step_03.png" alt="STEP1"></h3>
-            <div class="steps__card-wrapper">
-              <div class="steps__card-box">
-                <p class="steps__card-desc">
-                  <picture>
-                    <source media="(max-width:767px)" srcset="./common/image/step_03-ttl-sp.png">
-                    <img src="./common/image/step_03-ttl.png" alt="抽選で200名様にオリジナルグッズプレゼント！" width="272" height="67" loading="lazy" class="img">
-                  </picture>
+            <div class="steps__card steps__card-three">
+              <h3 class="steps__card-title"><img src="./common/image/step_03.png" alt="STEP1"></h3>
+              <div class="steps__card-wrapper">
+                <div class="steps__card-box">
+                  <p class="steps__card-desc">
+                    <picture>
+                      <source media="(max-width:767px)" srcset="./common/image/step_03-ttl-sp.png">
+                      <img src="./common/image/step_03-ttl.png" alt="抽選で200名様にオリジナルグッズプレゼント！" width="272" height="67"
+                        loading="lazy" class="img">
+                    </picture>
+                  </p>
+                  <img src="./common/image/gift_img.png" alt="抽選で200名様にオリジナルグッズプレゼント！" width="106" height="137"
+                    loading="lazy" class="img img-card">
+                </div>
+                <p class="steps__note">
+                  ※診断結果ページ内のシェアボタンからの投稿が対象となります。<br>
+                  ※当選者には○○日以降にDMにてご連絡差し上げます
                 </p>
-                <img src="./common/image/gift_img.png" alt="抽選で200名様にオリジナルグッズプレゼント！" width="106" height="137" loading="lazy" class="img img-card">
               </div>
-              <p class="steps__note">
-                ※診断結果ページ内のシェアボタンからの投稿が対象となります。<br>
-                ※当選者には○○日以降にDMにてご連絡差し上げます
-              </p>
             </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- APPLICATION -->
+      <section class="application">
+        <div class="application__wrapper">
+          <div class="application__header">
+            <picture>
+              <img src="./common/image/app-guid-heading.png" alt="応募要項" loading="lazy" width="357" height="87">
+            </picture>
+          </div>
+          <div class="application__block">
+            <ul class="application__list">
+              <li class="application__item">第一生命の契約有無に関わらず、応募いただけます。</li>
+              <li class="application__item">応募できる方は、成人に限ります。未成年の方が万が一応募されても当せん通知は届きません。</li>
+              <li class="application__item">第一生命の社員ならびにその家族は応募できません。</li>
+              <li class="application__item">事情により、予告なく本キャンペーンの内容を変更または実施を中止する場合があります。</li>
+              <li class="application__item">同一人物による複数アカウントでの連続応募など、キャンペーン運営上不公正と当社が判断した場合、事前告知なく当せんを無効とさせていただく場合がございます。
+              </li>
+              <li class="application__item">今後も同様のキャンペーンを実施する場合があります。</li>
+              <li class="application__item">お届け時に退会されていた場合は、賞品のお届けができません。</li>
+              <li class="application__item">当選された賞品の転売・譲渡は固く禁止いたします。</li>
+              <li class="application__item">住所不明、転居先不明、長期不在などにより賞品をお届けできない場合には、当せんを無効とさせていただきます。</li>
+              <li class="application__item">本キャンペーンに関して応募者が被った損害または損失などについては、当社の故意または重過失に起因する場合を除き、当社は一切の責任を負わないものとします。
+                 </li>
+              <li class="application__item">第一生命ではいただいた内容を以下の業務などに活用します。</li>
+              <li class="application__item">第一生命の業務に関する情報提供・運営管理</li>
+              <li class="application__item">詳細は、<a href="https://www.dai-ichi-life.co.jp/"
+                  target="_blank">第一生命ホームページ</a>でご覧いただけます。</li>
+            </ul>
           </div>
         </div>
+      </section>
+
+      <div class="btn">
+        <a href="https://mirashiru.dai-ichi-life.co.jp/article/1440491" class="btn__primary">キャンペーントップへ</a>
       </div>
-    </section>
-    <section class="application">
-      <div class="application__wrapper">
-        <div class="heading">
-          <h2 class="heading__text">
-            応募要項
-          </h2>
-        </div>
-        <div class="application__block">
-          <ul class="application__list">
-            <li class="application__item">第一生命の契約有無に関わらず、応募いただけます。</li>
-            <li class="application__item">応募できる方は、成人に限ります。未成年の方が万が一応募されても当せん通知は届きません。</li>
-            <li class="application__item">第一生命の社員ならびにその家族は応募できません。</li>
-            <li class="application__item">事情により、予告なく本キャンペーンの内容を変更または実施を中止する場合があります。</li>
-            <li class="application__item">同一人物による複数アカウントでの連続応募など、キャンペーン運営上不公正と当社が判断した場合、事前告知なく当せんを無効とさせていただく場合がございます。</li>
-            <li class="application__item">今後も同様のキャンペーンを実施する場合があります。</li>
-            <li class="application__item">お届け時に退会されていた場合は、賞品のお届けができません。</li>
-            <li class="application__item">当選された賞品の転売・譲渡は固く禁止いたします。</li>
-            <li class="application__item">住所不明、転居先不明、長期不在などにより賞品をお届けできない場合には、当せんを無効とさせていただきます。</li>
-            <li class="application__item">本キャンペーンに関して応募者が被った損害または損失などについては、当社の故意または重過失に起因する場合を除き、当社は一切の責任を負わないものとします。  </li>
-            <li class="application__item">第一生命ではいただいた内容を以下の業務などに活用します。</li>
-            <li class="application__item">第一生命の業務に関する情報提供・運営管理</li>
-            <li class="application__item">詳細は、<a href="https://www.dai-ichi-life.co.jp/" target="_blank">第一生命ホームページ</a>でご覧いただけます。</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <div class="btn">
-      <a href="https://mirashiru.dai-ichi-life.co.jp/article/1440491" class="btn__primary">キャンペーントップへ</a>
+      <p class="copyright">&copy; ANYCOLOR, Inc.</p>
     </div>
-    <p class="copyright">&copy; ANYCOLOR, Inc.</p>
   </main>
   <script src="./common/js/script.js"></script>
 </body>
