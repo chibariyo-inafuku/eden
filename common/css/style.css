@@ -870,6 +870,21 @@ h6 {
   text-decoration: unset;
   /* border: 1px solid transparent; */
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question__btn .hover {
+  display: none;
+}
+
+.question__btn:hover .hover {
+  display: block;
+}
+
+.question__btn:hover .norms {
+  display: none;
 }
 
 @media only screen and (max-width: 767px) {

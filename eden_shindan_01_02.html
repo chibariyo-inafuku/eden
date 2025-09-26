@@ -3,11 +3,14 @@
 
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MCLC97');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MCLC97');</script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,8 +27,8 @@
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCLC97"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCLC97" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <section class="question">
 
@@ -46,10 +49,20 @@
             <img src="./common/image/question_num_02.png" alt="Q1" width="275" height="72" loading="lazy" class="img">
           </picture>
         </div>
-        <h2 class="question__title">理想のお風呂時間は？​</h2>
+        <h2 class="question__title">
+          <img src="./common/image/qn01-02-title.png" alt="理想のお風呂時間は？​" loading="lazy" width="210" height="23">
+        </h2>
         <div class="question__btns">
-          <a href="#" id="choiceA" class="question__btn question__btn-purple">おうちでまったり癒しの時間</a>
-          <a href="#" id="choiceB" class="question__btn question__btn-blue">開放的な温泉でリフレッシュ</a>
+          <a href="#" id="choiceA" class="question__btn question__btn-purple">
+            <img src="./common/image/ans01-02-a.png" alt="おうちでまったり癒しの時間" loading="lazy" width="212" height="19"
+              class="norms">
+            <img src="./common/image/ans01-02-a-hover.png" alt="おうちでまったり癒しの時間" loading="lazy" width="212" height="19"
+              class="hover"></a>
+          <a href="#" id="choiceB" class="question__btn question__btn-blue">
+            <img src="./common/image/ans01-02-b.png" alt="開放的な温泉でリフレッシュ" loading="lazy" width="211" height="19"
+              class="norms">
+            <img src="./common/image/ans01-02-b-hover.png" alt="開放的な温泉でリフレッシュ" loading="lazy" width="211" height="19"
+              class="hover"></a>
         </div>
         <div class="question__dots">
           <ul>
@@ -75,37 +88,37 @@
     const START = "eden_shindan_00.html";
     const KEY = "edenTrail";
 
-    function getTrail() { try { return JSON.parse(sessionStorage.getItem(KEY) || "[]"); } catch(e) { return []; } }
+    function getTrail() { try { return JSON.parse(sessionStorage.getItem(KEY) || "[]"); } catch (e) { return []; } }
     function setTrail(a) { sessionStorage.setItem(KEY, JSON.stringify(a)); }
-    function pushTrail(p) { const t = getTrail(); if(t.length === 0 || t[t.length - 1] !== p) { t.push(p); setTrail(t); } }
+    function pushTrail(p) { const t = getTrail(); if (t.length === 0 || t[t.length - 1] !== p) { t.push(p); setTrail(t); } }
     function popTrail() { const t = getTrail(); const p = t.pop(); setTrail(t); return p; }
 
     function buildNext(url, thisPage) {
       const u = new URL(url, location.href);
       const cur = new URLSearchParams(location.search);
-      for(const [k, v] of cur.entries()) { u.searchParams.set(k, v); }
+      for (const [k, v] of cur.entries()) { u.searchParams.set(k, v); }
       u.searchParams.set("from", thisPage);
       return u.toString();
     }
 
     (function initTrail() {
       const from = new URLSearchParams(location.search).get("from");
-      if(from) { pushTrail(from); }
-      if(location.pathname.endsWith(START)) { setTrail([]); }
+      if (from) { pushTrail(from); }
+      if (location.pathname.endsWith(START)) { setTrail([]); }
     })();
 
     function goBack() {
       const prev = popTrail();
-      if(prev) {
+      if (prev) {
         const u = new URL(prev, location.href);
         const cur = new URLSearchParams(location.search);
-        for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
+        for (const [k, v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
         location.href = u.toString();
         return;
       }
       const u = new URL(START, location.href);
       const cur = new URLSearchParams(location.search);
-      for(const [k, v] of cur.entries()) { if(k !== "from") u.searchParams.set(k, v); }
+      for (const [k, v] of cur.entries()) { if (k !== "from") u.searchParams.set(k, v); }
       location.href = u.toString();
     }
 
