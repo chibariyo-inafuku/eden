@@ -36,53 +36,6 @@ h6 {
   font-weight: inherit;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("../../common/fonts/Inter-VariableFont_opsz,wght.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans JP";
-  src: url("../../common/fonts/NotoSansJP-VariableFont_wght.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CorporateLogo";
-  src: url("../../common/fonts/Corporate-Logo-Bold-ver3.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.heading {
-  background: url(../../common/image/gift_heading.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  max-width: 434px;
-  height: 95px;
-  margin: 0 auto 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (max-width: 767px) {
-  .heading {
-    width: 100%;
-    max-width: 350px;
-    height: 90px;
-    background-size: 100% 100%;
-    position: relative;
-    margin-top: -12px;
-    margin-bottom: 14px;
-  }
-}
 
 .heading__text {
   color: #00196c;
@@ -213,7 +166,7 @@ h6 {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  background: url(../../common/image/gift_bg-sp.png), white;
+  background: url(../../common/image/gift_bg_sp.png), white;
   padding: 0 0 20px;
   background-size: cover;
 }
@@ -546,19 +499,7 @@ h6 {
   }
 }
 
-.steps__card-three .steps__card-wrapper::after {
-  content: "";
-  background: url(../../common/image/step_03-bg.png);
-  width: 100%;
-  height: 147px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: -12px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
+
 
 .steps__card-three .steps__card-desc {
   margin-bottom: 5px;
